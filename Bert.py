@@ -222,3 +222,4 @@ print(classification_report(predictions.label_ids, preds, target_names=label_enc
 trainer.save_model('./final_url_bert_model')
 tokenizer.save_pretrained('./final_url_bert_model')
 print("\nمدل ذخیره شد در './final_url_bert_model'")
+print('finish')
