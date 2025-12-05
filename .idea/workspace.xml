@@ -5,10 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f2d06f2-44bf-4a21-8d03-701cdede281c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/final_phishing_model_995/config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final_phishing_model_995/model.safetensors" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final_phishing_model_995/special_tokens_map.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final_phishing_model_995/tokenizer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final_phishing_model_995/tokenizer_config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final_phishing_model_995/training_args.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final_phishing_model_995/vocab.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/secbert_result/checkpoint-41000/tokenizer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/secbert_result/checkpoint-41000/trainer_state.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bert.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bert.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bert_acc.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bert_acc.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bert_fun.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bert_fun.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/train.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,25 +53,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.Bert.executor": "Run",
-    "Python.Bert_fun.executor": "Run",
-    "Python.train.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/BARCODE/Desktop/Phishing_Detection/data",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.Bert.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Bert_fun.executor&quot;: &quot;Run&quot;,
+    &quot;Python.train.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/BARCODE/Desktop/Phishing_Detection/data&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\BARCODE\Desktop\Phishing_Detection\data" />
@@ -116,7 +124,10 @@
       <updated>1764763390767</updated>
       <workItem from="1764763391813" duration="7463000" />
       <workItem from="1764856843403" duration="368000" />
-      <workItem from="1764931583356" duration="2163000" />
+      <workItem from="1764931583356" duration="4309000" />
+      <workItem from="1764942534466" duration="1322000" />
+      <workItem from="1764946626686" duration="3589000" />
+      <workItem from="1764950302778" duration="39000" />
     </task>
     <servers />
   </component>

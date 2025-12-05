@@ -1,8 +1,5 @@
-# train.py - نسخه نهایی با نمایش دقت لحظه‌ای + بدون خطا
-
 import os
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
-
 import pandas as pd
 import numpy as np
 import torch
