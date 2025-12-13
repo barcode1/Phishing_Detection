@@ -22,7 +22,6 @@ def preprocess(url):
 
 print("در حال لود دیتاست...")
 df = pd.read_csv('data/malicious_phish.csv')[['url', 'type']].dropna()
-
 print("توزیع اولیه:")
 print(df['type'].value_counts())
 
@@ -59,8 +58,8 @@ dataset = DatasetDict({
     'test': Dataset.from_pandas(test[['text', 'label']], preserve_index=False)
 })
 
-# توکنایزر و مدل
-tokenizer = AutoTokenizer.from_pretrained("microsoft/cyberbert-base")
+# توکنایزر و مدل - استفاده از CYBERT که دقیقاً نامش CYBERT است (معروف به Cyber BERT در حوزه امنیت سایبری)
+tokenizer = AutoTokenizer.from_pretrained("SynamicTechnologies/CYBERT")
 
 def tokenize(batch):
     return tokenizer(batch['text'], truncation=True, max_length=256)
@@ -71,10 +70,8 @@ tokenized = tokenized.rename_column('label', 'labels')
 tokenized.set_format('torch')
 
 data_collator = DataCollatorWithPadding(tokenizer=tokenizer)
-model = AutoModelForSequenceClassification.from_pretrained(
-    "microsoft/cyberbert-base",
-    num_labels=4
-)
+
+model = AutoModelForSequenceClassification.from_pretrained("SynamicTechnologies/CYBERT", num_labels=4)
 
 # این تابع دقت و F1 رو در هر اِپوک نشون میده
 def compute_metrics(eval_pred):
@@ -91,7 +88,7 @@ def compute_metrics(eval_pred):
 
 # تنظیمات آموزش + نمایش دقت
 args = TrainingArguments(
-    output_dir="./cyberbert_result",
+    output_dir="./cybert_result",
     num_train_epochs=6,
     per_device_train_batch_size=32,
     per_device_eval_batch_size=64,
@@ -100,12 +97,12 @@ args = TrainingArguments(
     warmup_steps=100,
     weight_decay=0.01,
     logging_steps=20,
-    eval_steps=500,                    # هر 500 قدم ارزیابی کنه
-    evaluation_strategy="steps",       # به جای epoch → هر چند قدم دقت رو نشون بده
+    eval_steps=500,
+    evaluation_strategy="steps",
     save_strategy="steps",
     save_steps=1000,
     load_best_model_at_end=True,
-    metric_for_best_model="accuracy",  # بهترین مدل بر اساس دقت ذخیره بشه
+    metric_for_best_model="accuracy",
     greater_is_better=True,
     fp16=torch.cuda.is_available(),
     dataloader_num_workers=2,
@@ -123,9 +120,8 @@ trainer = Trainer(
     eval_dataset=tokenized['val'],
     tokenizer=tokenizer,
     data_collator=data_collator,
-    compute_metrics=compute_metrics,   # این خط دقت رو نشون میده!
+    compute_metrics=compute_metrics,
 )
-
 
 trainer.train()
 
@@ -136,6 +132,5 @@ y_pred = np.argmax(preds.predictions, axis=1)
 print("\n" + classification_report(preds.label_ids, y_pred, target_names=le.classes_, digits=6))
 
 # ذخیره نهایی
-trainer.save_model("./final_phishing_model_cyber_Bert")
-tokenizer.save_pretrained("./final_phishing_model_cyber_Bert")
-print("\nمدل نهایی  ذخیره شد!")
+trainer.save_model("./final_phishing_model_cybert")
+tokenizer.save_pretrained("./final_phishing_model_cybert")
