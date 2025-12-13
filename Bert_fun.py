@@ -58,7 +58,7 @@ dataset = DatasetDict({
     'test': Dataset.from_pandas(test[['text', 'label']], preserve_index=False)
 })
 
-# توکنایزر و مدل - استفاده از CYBERT که دقیقاً نامش CYBERT است (معروف به Cyber BERT در حوزه امنیت سایبری)
+# توکنایزر و مدل CYBERT
 tokenizer = AutoTokenizer.from_pretrained("SynamicTechnologies/CYBERT")
 
 def tokenize(batch):
@@ -71,7 +71,12 @@ tokenized.set_format('torch')
 
 data_collator = DataCollatorWithPadding(tokenizer=tokenizer)
 
-model = AutoModelForSequenceClassification.from_pretrained("SynamicTechnologies/CYBERT", num_labels=4)
+# مهم: اضافه کردن ignore_mismatched_sizes=True برای حل مشکل سایز classifier
+model = AutoModelForSequenceClassification.from_pretrained(
+    "SynamicTechnologies/CYBERT",
+    num_labels=4,
+    ignore_mismatched_sizes=True  # این خط مشکل size mismatch رو حل می‌کنه
+)
 
 # این تابع دقت و F1 رو در هر اِپوک نشون میده
 def compute_metrics(eval_pred):
