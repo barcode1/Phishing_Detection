@@ -5,18 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f2d06f2-44bf-4a21-8d03-701cdede281c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/final_phishing_model_995/config.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/final_phishing_model_995/model.safetensors" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/final_phishing_model_995/special_tokens_map.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/final_phishing_model_995/tokenizer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/final_phishing_model_995/tokenizer_config.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/final_phishing_model_995/training_args.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/final_phishing_model_995/vocab.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/secbert_result/checkpoint-41000/tokenizer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/secbert_result/checkpoint-41000/trainer_state.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bert_acc.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bert_acc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bert_fun.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bert_fun.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,6 +117,8 @@
       <workItem from="1764942534466" duration="1322000" />
       <workItem from="1764946626686" duration="3589000" />
       <workItem from="1764950302778" duration="39000" />
+      <workItem from="1764950404529" duration="512000" />
+      <workItem from="1765000061624" duration="546000" />
     </task>
     <servers />
   </component>
